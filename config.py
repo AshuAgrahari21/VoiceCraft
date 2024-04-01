@@ -37,11 +37,7 @@ def MyParser():
     # path
     parser.add_argument("--exp_dir", type=str, default=None, help="will be combined with dataset name")
     parser.add_argument("--dataset", type=str, help="e.g. 'libritts', 'gigaspeech', they are folder name in the data dir also")
-    parser.add_argument("--dataset_dir", type=str, help="need to be compatible with corresponding dataset py file")
-    parser.add_argument("--phn_folder_name", type=str, default="phonemes", help="for libritts I also have arpa phns, in which case should be phonemes_arpa")
-    parser.add_argument("--encodec_folder_name", type=str, default="encodec_16khz_4codebooks", help="folder where encodec codes are stored")
-    parser.add_argument("--manifest_name", type=str, default="manifest", help="metadata filename")
-
+    parser.add_argument("--dataset_dir", type=str, help="need to be c
     # data focused
     parser.add_argument("--pad_x", type=int, default=1, help="whether or not always pad x to have text_max_length. select 1 to get the maximal memory consumption, but the actual case should be smaller, better to have it being 0")
     parser.add_argument("--audio_max_length", type=float, default=20, help="in second, crop or drop the audio is length is longer than this")
